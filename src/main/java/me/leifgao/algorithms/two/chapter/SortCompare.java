@@ -10,14 +10,15 @@ public class SortCompare {
 
     public static void main(String[] args) {
 
-        String alg1= "me.leifgao.algorithms.two.chapter.SelectionSort";
-        String alg2 = "me.leifgao.algorithms.two.chapter.InsertionSort";
-        int N = 10000;
-        int T = 100;
+        String alg1= "me.leifgao.algorithms.two.chapter.InsertionSort";
+        String alg2 = "me.leifgao.algorithms.two.chapter.ShellSort";
+        int N = 100000;
+        int T = 1;
         double alg1Time = timeRandomInput(alg1, N, T);
         System.out.println(alg1 + "的运行时间是:" + alg1Time);
-        double alg2Time = timeRandomInput(alg1, N, T);
+        double alg2Time = timeRandomInput(alg2, N, T);
         System.out.println(alg2 + "的运行时间是:" + alg2Time);
+        System.out.println(alg2 + "is" + alg1Time/alg2Time);
 
     }
 
