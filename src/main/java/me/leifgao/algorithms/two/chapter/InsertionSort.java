@@ -19,9 +19,5 @@ public class InsertionSort extends AbstractSortExample{
 
 
     public static void main(String[] args) {
-        InsertionSort insertionSort = new InsertionSort();
-
-
-
     }
 }
