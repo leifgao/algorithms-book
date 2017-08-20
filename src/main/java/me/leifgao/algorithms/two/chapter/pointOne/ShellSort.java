@@ -1,5 +1,5 @@
 
-package me.leifgao.algorithms.two.chapter;
+package me.leifgao.algorithms.two.chapter.pointOne;
 
 import edu.princeton.cs.introcs.StdRandom;
 

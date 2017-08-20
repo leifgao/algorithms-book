@@ -1,4 +1,4 @@
-package me.leifgao.algorithms.two.chapter;
+package me.leifgao.algorithms.two.chapter.pointOne;
 
 /**
  * Created by leif on 2017/8/19
