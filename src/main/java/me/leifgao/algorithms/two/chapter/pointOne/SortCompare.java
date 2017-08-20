@@ -10,9 +10,9 @@ public class SortCompare {
 
     public static void main(String[] args) {
 
-        String alg1= "me.leifgao.algorithms.two.chapter.InsertionSort";
-        String alg2 = "me.leifgao.algorithms.two.chapter.ShellSort";
-        int N = 100000;
+        String alg1= "me.leifgao.algorithms.two.chapter.pointOne.ShellSort";
+        String alg2 = "me.leifgao.algorithms.two.chapter.pointThree.QuickSort";
+        int N = 100000000;
         int T = 1;
         double alg1Time = timeRandomInput(alg1, N, T);
         System.out.println(alg1 + "的运行时间是:" + alg1Time);
