@@ -104,4 +104,16 @@ public class BinarySearchST<K extends Comparable<K>, V>{
         }
         return low;
     }
+
+    public K min() {
+        return keys[0];
+    }
+
+    public K max() {
+        return keys[N-1];
+    }
+
+    public K select(int k) {
+        return keys[k];
+    }
 }
