@@ -54,7 +54,7 @@ public class FixedCapacityStackOfStrings {
     }
 
     /**
-     * 打印出栈内容
+     * 打印出栈内容(根据size)
      */
     public void printStack() {
         System.out.print("||");
@@ -62,6 +62,18 @@ public class FixedCapacityStackOfStrings {
             System.out.print(a[i] + " ");
         }
         System.out.print("||");
+        System.out.println();
+    }
+
+    /**
+     * 当打印出栈底层的整个数组时，会导致不是栈的内容打印
+     */
+    public void printStackInnerArray() {
+        System.out.print("||");
+        for (int i=0; i<this.a.length; i++) {
+            System.out.print(a[i] + " ");
+        }
+        System.out.println("||");
         System.out.println();
     }
 
@@ -77,9 +89,9 @@ public class FixedCapacityStackOfStrings {
             }else if (!s.isEmpty()) {
                 StdOut.print(s.pop() + "\n");
             }
-
-            s.printStack();
         }
+        s.printStack();
+        s.printStackInnerArray();
         StdOut.println("定容栈中留了" + s.size + "数据");
     }
 }
