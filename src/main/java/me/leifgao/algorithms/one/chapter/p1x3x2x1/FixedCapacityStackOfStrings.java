@@ -9,20 +9,20 @@ import java.util.Scanner;
  * Created by leif on 2017/9/20
  * 定容栈
  */
-public class FixedCapacityStackOfStrings {
+public class FixedCapacityStackOfStrings<Item> {
 
-    private String[] a;
+    private Item[] a;
     private int size;
 
     public FixedCapacityStackOfStrings(int cap) {
-        a = new String[cap];
+        a = (Item[]) new Object[cap];
     }
 
     /**
      * 入栈
      * @param item
      */
-    public void push(String item) {
+    public void push(Item item) {
         a[size++] = item;
     }
 
@@ -30,7 +30,7 @@ public class FixedCapacityStackOfStrings {
      * 出栈
      * @return
      */
-    public String pop() {
+    public Item pop() {
 
         return a[--size];
     }
@@ -78,7 +78,7 @@ public class FixedCapacityStackOfStrings {
     }
 
     public static void main(String[] args) throws Exception{
-        FixedCapacityStackOfStrings s = new FixedCapacityStackOfStrings(100);
+        FixedCapacityStackOfStrings<String> s = new FixedCapacityStackOfStrings<>(100);
 
         Scanner scanner = new Scanner(new File("tobe.txt"));
         while (scanner.hasNext()) {
