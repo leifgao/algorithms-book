@@ -9,12 +9,12 @@ import java.util.Scanner;
  * Created by leif on 2017/9/20
  * 定容栈
  */
-public class FixedCapacityStackOfStrings<Item> {
+public class FixedCapacityArrayStack<Item> {
 
     private Item[] a;
     private int size;
 
-    public FixedCapacityStackOfStrings(int cap) {
+    public FixedCapacityArrayStack(int cap) {
         a = (Item[]) new Object[cap];
     }
 
@@ -78,7 +78,8 @@ public class FixedCapacityStackOfStrings<Item> {
     }
 
     public static void main(String[] args) throws Exception{
-        FixedCapacityStackOfStrings<String> s = new FixedCapacityStackOfStrings<>(100);
+        //测试定容栈代码
+        FixedCapacityArrayStack<String> s = new FixedCapacityArrayStack<>(100);
 
         Scanner scanner = new Scanner(new File("tobe.txt"));
         while (scanner.hasNext()) {
