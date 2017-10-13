@@ -1,10 +1,12 @@
 package me.leifgao.algorithms.one.chapter.p1x3x2x3;
 
+import java.util.Iterator;
+
 /**
  * Created by leif on 2017/9/27
  * 动态扩展栈（数组实现）
  */
-public class ResizingArrayStack<Item> {
+public class ResizingArrayStack<Item> implements Iterable {
 
     private Item[] a; //数组实现动态栈
     private int size; //动态扩展栈大小
@@ -42,5 +44,30 @@ public class ResizingArrayStack<Item> {
             temp[i] = a[i];
         }
         a = temp;
+    }
+
+    @Override
+    public Iterator<Item> iterator() {
+        return new ReverseArrayIterator();
+    }
+
+    private class ReverseArrayIterator implements Iterator<Item> {
+
+        private int i = size;
+
+        @Override
+        public boolean hasNext() {
+            return i>0;
+        }
+
+        @Override
+        public Item next() {
+            return a[--i];
+        }
+
+    }
+
+    public static void main(String[] args) {
+        //测试动态扩展栈
     }
 }

@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 /**
  * Created by leif on 2017/9/20
- * 定容栈
+ * 定容栈（数组实现）
  */
 public class FixedCapacityArrayStack<Item> {
 
