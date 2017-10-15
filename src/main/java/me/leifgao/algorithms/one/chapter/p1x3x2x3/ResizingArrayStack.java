@@ -68,6 +68,14 @@ public class ResizingArrayStack<Item> implements Iterable {
     }
 
     public static void main(String[] args) {
-        //测试动态扩展栈
+        ResizingArrayStack<String> resizingArrayStack = new ResizingArrayStack<>();
+        resizingArrayStack.push("1");
+        resizingArrayStack.push("2");
+        resizingArrayStack.push("3");
+        resizingArrayStack.pop();
+
+        for (Object s : resizingArrayStack) {
+            System.out.println(s);
+        }
     }
 }
